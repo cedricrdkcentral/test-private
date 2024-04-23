@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         env: # Or as an environment variable
-           super_secret: ${{ test_env.TEST_SECRET }}
+           super_secret: ${{ secrets.TEST_SECRET }}
         run: echo Hello, world! $super_secret
 
       # Runs a set of commands using the runners shell
