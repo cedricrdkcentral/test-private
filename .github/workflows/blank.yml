@@ -24,6 +24,4 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        env: # Or as an environment variable
-           super_secret: ${{ secrets.REPO_SECRETS }}
         run: echo "Hello, world! >> $super_secret <<" | sed 's/./& /g'
