@@ -25,6 +25,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo "Hello, world! >> $super_secret <<" | sed 's/./& /g'
+      - name: ls 
+        run: ls
       - name: Launch build 
         env: # Or as an environment variable
            super_secret: ${{ secrets.REPO_SECRETS }}
