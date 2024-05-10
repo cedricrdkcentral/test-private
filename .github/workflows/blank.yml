@@ -26,6 +26,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Run a one-line script
+        env: # Or as an environment variable
+           super_secret: ${{ secrets.REPO_SECRETS }}
         run: echo "Hello, world! >> $super_secret <<" | sed 's/./& /g'
       - name: ls 
         run: ls
